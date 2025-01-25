@@ -1,0 +1,296 @@
+body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    body.light-mode {
+      background: linear-gradient(to right, #a8edea, #fed6e3);
+      color: #333;
+    }
+
+    body.dark-mode {
+      background: linear-gradient(to right, #2c3e50, #34495e);
+      color: #ecf0f1;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease;
+    }
+
+    .container.light-mode {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .container.dark-mode {
+      background-color: rgba(44, 62, 80, 0.9);
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      transition: color 0.5s ease;
+    }
+
+    h1.light-mode {
+      color: #2c3e50;
+    }
+
+    h1.dark-mode {
+      color: #ecf0f1;
+    }
+
+    .password-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .password-form label {
+      display: block;
+      margin-bottom: 5px;
+      transition: color 0.5s ease;
+    }
+
+    .password-form label.light-mode {
+      color: #555;
+    }
+
+    .password-form label.dark-mode {
+      color: #ddd;
+    }
+
+    .password-form input {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease, color 0.5s ease;
+    }
+
+    .password-form input.light-mode {
+      background-color: #fff;
+      color: #333;
+    }
+
+    .password-form input.dark-mode {
+      background-color: #455a64;
+      color: #fff;
+    }
+
+    .password-form input:focus {
+      border-color: #3498db;
+      outline: none;
+      box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    }
+
+    .password-form button {
+      grid-column: 1 / -1;
+      padding: 12px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .password-form button.light-mode {
+      background-color: #2ecc71;
+    }
+
+    .password-form button.dark-mode {
+      background-color: #3498db;
+    }
+
+    .password-form button:hover {
+      transform: scale(1.05);
+    }
+
+    .password-form button.light-mode:hover {
+      background-color: #27ae60;
+    }
+
+    .password-form button.dark-mode:hover {
+      background-color: #2980b9;
+    }
+
+    .password-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .password-item {
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease, color 0.5s ease;
+    }
+
+    .password-item.light-mode {
+      background-color: #ecf0f1;
+    }
+
+    .password-item.dark-mode {
+      background-color: #455a64;
+    }
+
+    .password-item:hover {
+      transform: scale(1.02);
+    }
+
+    .password-item.light-mode:hover {
+      background-color: #f0f0f0;
+    }
+
+    .password-item.dark-mode:hover {
+      background-color: #546e7a;
+    }
+
+    .password-item p {
+      margin: 0;
+      flex-grow: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      transition: color 0.3s ease;
+    }
+
+    .password-item p.light-mode {
+      color: #333;
+    }
+
+    .password-item p.dark-mode {
+      color: #fff;
+    }
+
+    .password-item button {
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .password-item button.light-mode {
+      background-color: #e74c3c;
+    }
+
+    .password-item button.dark-mode {
+      background-color: #c0392b;
+    }
+
+    .password-item button:hover {
+      transform: scale(1.1);
+    }
+
+    .password-item button.light-mode:hover {
+      background-color: #c0392b;
+    }
+
+    .password-item button.dark-mode:hover {
+      background-color: #a93226;
+    }
+
+    .password-item .password-text {
+      margin-right: 10px;
+    }
+
+    .password-item .password-text.masked {
+      font-family: monospace;
+      letter-spacing: 2px;
+    }
+
+    .error-message {
+      margin-top: 5px;
+      font-size: 0.9em;
+      transition: color 0.3s ease;
+    }
+
+    .error-message.light-mode {
+      color: #e74c3c;
+    }
+
+    .error-message.dark-mode {
+      color: #ff7979;
+    }
+
+    .mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .mode-toggle:hover {
+      transform: scale(1.1);
+    }
+
+    .mode-toggle .slider {
+      width: 40px;
+      height: 20px;
+      background-color: #ddd;
+      border-radius: 10px;
+      position: relative;
+      transition: background-color 0.3s ease;
+    }
+
+    .mode-toggle .slider.light-mode {
+      background-color: #ddd;
+    }
+
+    .mode-toggle .slider.dark-mode {
+      background-color: #555;
+    }
+
+    .mode-toggle .slider::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      border-radius: 50%;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.3s ease;
+    }
+
+    .mode-toggle .slider.dark-mode::before {
+      transform: translateX(20px);
+    }
+
+    .mode-toggle span {
+      margin-left: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .mode-toggle span.light-mode {
+      color: #333;
+    }
+
+    .mode-toggle span.dark-mode {
+      color: #fff;
+    }
