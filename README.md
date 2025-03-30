@@ -1,4 +1,3 @@
-# Password-Manager
 # Password Manager App
 
     A simple and secure password manager application built with React. This app allows you to store your website credentials securely and manage them easily.
